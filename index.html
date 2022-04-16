@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Montserrat:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="./css/styles.css">
+    <title>Practice Freebie GiftStore</title>
 </head>
-<body>
-    <header>
-        <a href="./index.html">logo</a>
-        <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Blogs</li>
-        </ul>
-        <button type="button">Gift finder</button>
+<body>  
+    <header class="header">
+        <div class="navigation">
+            <nav class="site-nav">
+                <a class="logo" href="./index.html">logo</a>
+                <ul class="nav-list">
+                    <li class="item current" ><a class="link" href="#home">Home</a></li>
+                    <li class="item"><a class="link" href="#about">About Us</a></li>
+                    <li class="item"><a class="link" href="#services">Services</a></li>
+                    <li class="item"><a class="link" href="#blogs">Blogs</a></li>
+                </ul>
+            <button class="btn" type="button">Gift finder</button>
+            </nav>
+        </div>
     </header>
 
     <main>
     <section>
 
         <div>
-            <h1>Find a gift for your wife or girlfriend</h1>
+            <h1><a name="home"></a>Find a gift for your wife or girlfriend</h1>
             <p>Struggling to find a gift for your wife or girlfriend?
             No problem!</p>
             <button type="button">Find gift now</button>
@@ -37,7 +48,7 @@
         </div>
         
         <div>
-            <h2>How we work</h2>
+            <h2><a name="about"></a>How we work</h2>
             <p>We’ve actually already asked hundreds of women what they want, and made a database with the results. All you have to do
             is take our short survey that only takes seconds, and our proprietary algorithm will match you with a few perfect gift
             options.</p>
@@ -86,7 +97,7 @@
             </ul>
         </section>
         <section>
-            <h2>Ready to get started?</h2>
+            <h2><a name="services"></a>Ready to get started?</h2>
             <p>Sign up or contact us</p>
             <ul>
                 <li>
@@ -99,7 +110,7 @@
 
         </section>
         <section>
-            <h2>Our Best Blogs Ever</h2>
+            <h2> <a name="blogs"></a>Our Best Blogs Ever</h2>
             <p>“Try our blog to find the best tips and tricks to select your gift”</p>
             <img src="./images/media.jpg" alt="Blog" width="400" height="370">
             <h3>Mr. John Doe</h3>
@@ -128,11 +139,11 @@
         </main>
         <footer>
             <ul>
-                <li>Home</li>
-                <li>About</li>
+                <li class="item current"><a href="#home">Home</a></li>
+                <li class="item"><a href="#about">About</a></li>
                 <li>Logo</li>
-                <li>Service</li>
-                <li>Blog</li>
+                <li class="item"><a href="#services">Service</a></li>
+                <li class="item"><a href="#blogs">Blog</a></li>
             </ul>
             <ul>
                 <li><a href=""aria-label="Facebook link" >Facebook</a></li>
