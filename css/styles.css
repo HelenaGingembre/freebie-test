@@ -54,7 +54,7 @@ img {
   height: auto;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', serif;
   font-size: 18px;
   /* line-height: 1.17; */
   color: var(--text-color-p);
@@ -81,7 +81,7 @@ body {
   /* margin: 10.93px auto 10.93px 80px; */
   padding-left: 46px; /* 80-34 =46*/
   color: var(--logo-color);
-  font-family: 'Homemade Apple', sans-serif;
+  font-family: 'Homemade Apple', serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -139,3 +139,88 @@ body {
 .current .link {
   color: var(--accent-color);
 }
+/* section Hero */
+.hero,
+.feature {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--bg-color-hero);
+  font-size: 20px;
+  line-height: 1.4;
+  /* or 28px */
+}
+.content {
+  width: 50%;
+  margin: 0;
+  flex-direction: column;
+  font-size: 20px;
+  justify-content: flex-start;
+  text-align: left;
+  line-height: 1.4;
+}
+.hero .content {
+  padding: 152px 126px 135px 162px; /*??????*/
+}
+.hero .title {
+  margin-bottom: 36px;
+  font-family: 'Montserrat', serif;
+  font-size: 56px;
+  line-height: 1.23; /* or 69px;*/
+}
+.hero .text {
+  margin-bottom: 50px;
+}
+.btn_primary {
+  padding: 23px 24px 15px 25px;
+  color: var(--text-color-second-p);
+  background: var(--accent-color);
+  font-size: 18px;
+  line-height: 1.22; /*22px;*/
+  align-items: center;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+.btn_primary:focus,
+.btn_primary:hover {
+  background: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+/* section Feature */
+.feature .content {
+  padding: 164px 166px 104px 112px;
+}
+.feature .title {
+  margin-bottom: 23px;
+  font-family: 'Montserrat', serif;
+  font-size: 32px;
+  line-height: 1.4; /* or 45px;*/
+}
+.feature .text {
+  margin-bottom: 35px;
+}
+.btn_secondary {
+  padding: 21px 46px 14px 47px;
+  background: transparent;
+  color: var(--accent-color);
+  font-size: 18px;
+  line-height: 134.77%;
+  /* identical to box height, or 24px */
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+.btn_secondary:focus,
+.btn_secondary:hover {
+  color: var(--text-color-second-p);
+  background: var(--accent-color);
+  border: none;
+}
+/* section posts */
