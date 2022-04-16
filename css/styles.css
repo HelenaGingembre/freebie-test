@@ -224,3 +224,37 @@ body {
   border: none;
 }
 /* section posts */
+.posts .title {
+  margin-bottom: 23px;
+  font-size: 32px;
+  line-height: 1.19; /*38px;*/
+  /* identical to box height */
+
+  text-align: center;
+}
+.posts .text {
+  margin-bottom: 64px;
+  font-size: 18px;
+  line-height: 1.36;
+  /* identical to box height, or 24px */
+
+  text-align: center;
+}
+.posts-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.posts-list .post-item + .post-item {
+  margin-left: 30px;
+}
+.post-item {
+  background-color: var(--bg-color-card);
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.05));
+}
+.post-item .content {
+  padding: 24px;
+}
+.content .title {
+  margin-bottom: 74px;
+}
