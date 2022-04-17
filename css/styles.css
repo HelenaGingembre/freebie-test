@@ -11,6 +11,7 @@
   --bg-color-footer: #fafafa;
   --bg-color-card: #fafafa;
   --bg-color-button: #231f20;
+  --bg-color-blog: #222222;
 }
 html {
   box-sizing: border-box;
@@ -162,19 +163,16 @@ body {
 .hero .content {
   padding: 152px 126px 135px 162px; /*??????*/
 }
-.hero .title {
+.hero-title {
   margin-bottom: 36px;
   font-family: 'Montserrat', serif;
   font-size: 56px;
   line-height: 1.23; /* or 69px;*/
 }
-.hero .text {
+.hero-text {
   margin-bottom: 50px;
 }
-.btn_primary {
-  padding: 23px 24px 15px 25px;
-  color: var(--text-color-second-p);
-  background: var(--accent-color);
+.btn {
   font-size: 18px;
   line-height: 1.22; /*22px;*/
   align-items: center;
@@ -184,8 +182,14 @@ body {
   text-transform: uppercase;
   box-sizing: border-box;
 }
-.btn_primary:focus,
-.btn_primary:hover {
+.hero .btn.primary {
+  padding: 23px 24px 15px 25px;
+  color: var(--text-color-second-p);
+  background: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+.hero .btn.primary:focus,
+.hero .btn.primary:hover {
   background: transparent;
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
@@ -194,37 +198,40 @@ body {
 .feature .content {
   padding: 164px 166px 104px 112px;
 }
-.feature .title {
+.feature-title {
   margin-bottom: 23px;
   font-family: 'Montserrat', serif;
   font-size: 32px;
   line-height: 1.4; /* or 45px;*/
 }
-.feature .text {
+.feature-text {
   margin-bottom: 35px;
 }
-.btn_secondary {
+.feature .btn.secondary {
   padding: 21px 46px 14px 47px;
   background: transparent;
   color: var(--accent-color);
-  font-size: 18px;
-  line-height: 134.77%;
+  /* font-size: 18px; */
+  line-height: 1.35;
   /* identical to box height, or 24px */
-  align-items: center;
-  text-align: center;
+  /* align-items: center;
+  text-align: center; */
   border: 1px solid var(--accent-color);
-  border-radius: 5px;
+  /* border-radius: 5px;
   text-transform: uppercase;
-  box-sizing: border-box;
+  box-sizing: border-box; */
 }
-.btn_secondary:focus,
-.btn_secondary:hover {
+.feature .btn.secondary:focus,
+.feature .btn.secondary:hover {
   color: var(--text-color-second-p);
   background: var(--accent-color);
-  border: none;
+  /* border: none; */
 }
 /* section posts */
-.posts .title {
+.posts {
+  padding-top: 96px;
+}
+.posts-title {
   margin-bottom: 23px;
   font-size: 32px;
   line-height: 1.19; /*38px;*/
@@ -232,7 +239,7 @@ body {
 
   text-align: center;
 }
-.posts .text {
+.posts-text {
   margin-bottom: 64px;
   font-size: 18px;
   line-height: 1.36;
@@ -242,19 +249,147 @@ body {
 }
 .posts-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
+  margin-bottom: 137px;
 }
 .posts-list .post-item + .post-item {
   margin-left: 30px;
 }
 .post-item {
+  /* width: 270px; */
   background-color: var(--bg-color-card);
   filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.05));
 }
 .post-item .content {
   padding: 24px;
+  text-align: left;
+  display: flex;
+
+  width: 100%;
+  align-items: flex-start;
 }
 .content .title {
+  max-width: 100%;
   margin-bottom: 74px;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height */
+}
+details .summary,
+details p {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.36; /*19px;*/
+}
+/* section contact */
+.contact {
+  background-color: var(--accent-color);
+}
+.contact .container {
+  padding: 81px 100px 69px;
+  display: flex;
+  flex-wrap: nowrap;
+
+  justify-content: space-between;
+  align-items: center;
+}
+.group {
+  margin-right: 229px;
+}
+.contact-title,
+.contact-text {
+  font-size: 32px;
+  line-height: 1.4;
+  /* identical to box height, or 45px */
+}
+.contact-list {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.contact .btn.primary {
+  margin-right: 16px;
+  padding: 18px 24px 10px 25px;
+  background-color: var(--bg-color-button);
+  color: var(--text-color-second-p);
+  border: 1px solid var(--bg-color-button);
+  box-sizing: border-box;
+}
+.contact .btn.secondary {
+  padding: 17px 16px 8px 17px;
+  background-color: transparent;
+  line-height: 1.35;
+  color: var(--text-color-p);
+  border: 1px solid var(--text-color-p);
+  box-sizing: border-box;
+}
+.contact .btn.primary:hover,
+.contact .btn.primary:focus {
+  background-color: transparent;
+  color: var(--text-color-p);
+  border: 1px solid var(--text-color-p);
+}
+.contact .btn.secondary:hover,
+.contact .btn.secondary:focus {
+  background-color: var(--bg-color-button);
+  color: var(--text-color-second-p);
+  border: 1px solid var(--text-color-p);
+}
+/* section Blog */
+.blog {
+  padding: 80px 0 71px;
+}
+.blog-title {
+  margin-bottom: 23px;
+  font-size: 32px;
+  line-height: 1.19;
+  /* identical to box height */
+
+  text-align: center;
+}
+.blog-text {
+  margin-bottom: 71px;
+  font-size: 18px;
+  line-height: 1.36;
+  /* identical to box height, or 24px */
+
+  text-align: center;
+}
+.card-feature {
+  display: flex;
+  flex-wrap: nowrap;
+
+  background-color: var(--bg-color-blog);
+  color: var(--text-color-second-p);
+}
+.card-content {
+  margin: 63px 200px 49px 78px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.card-autor {
+  margin-bottom: 27px;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1.4;
+}
+.card-title {
+  margin-bottom: 60px;
+  font-size: 48px;
+  font-weight: 200;
+  line-height: 1.21;
+}
+.card-link {
+  font-size: 18px;
+
+  line-height: 140.62%;
+  color: var(--text-color-second-p);
+}
+.blog-list {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: nowrap;
 }
